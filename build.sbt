@@ -16,6 +16,23 @@ resolvers ++= Seq(
   "jcenter" at "http://jcenter.bintray.com"
 )
 
+
+//// Repositories for dependencies
+//resolvers ++= Seq(Resolver.mavenLocal,
+//  DefaultMavenRepository,
+//  Resolver.typesafeRepo("releases"),
+//  Resolver.typesafeRepo("snapshots"),
+//  Resolver.typesafeIvyRepo("snapshots"),
+//  Resolver.sonatypeRepo("releases"),
+//  Resolver.sonatypeRepo("snapshots"),
+//  Resolver.defaultLocal)
+//
+//
+
+
+
+
+
 scalacOptions in (Compile, compile) ++=
   (dependencyClasspath in Compile).value.files.map("-P:wartremover:cp:" + _.toURI.toURL)
 
@@ -34,6 +51,9 @@ libraryDependencies ++= Seq(
 )
 
 proguardScala in Android := true
+
+// Activate proguard for Android
+useProguard in Android := true
 
 proguardOptions in Android ++= Seq(
   "-ignorewarnings",
