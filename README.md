@@ -43,3 +43,5 @@ example proj: https://github.com/pfn/android-sdk-plugin/tree/master/sbt-test/and
 akka http://spin.atomicobject.com/2013/06/20/akka-scala-on-android/
 akka http://macroid.github.io/modules/Akka.html
 reactive stuff: http://danosipov.com/?p=692
+retro lamda and stuff: https://www.theguardian.com/info/developer-blog/2014/dec/11/functional-android
+
